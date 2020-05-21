@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Coin Toss Gambling Simulation</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+    <script src='js/simulate.js'></script>
+</head>
+
+<body>
+    <h1>Monte Carlo Simulation Coin Toss Gambling Simulation</h1>
+    <p>
+        Casinos houses operate with many games that favor the house. The odds may be in their favor or
+        perhaps the payouts are not fair. By playing this unfair game over a long period of time, you will be
+        mathmatically inclined to lose money.
+        This program seeks to simulate where you'll end up if the pay-outs are slightly unfair
+        <br><br>
+        In this simulation, you will see that flipping a fair coin, with a slightly unfair payout, is
+        guaranteed to lose you money over a long period of time.
+        <br><br>
+        The main takeaway is: be the house.
+        <br><br>
+    <h2>Side notes</h2>
+    If you don't have enough money to match the bet amount, you will bet everything.
+    Payouts are rounded up to the nearest cent.
+    <br><br>
+    <a href="https://en.wikipedia.org/wiki/Law_of_large_numbers">Wiki: Law of large Numbers</a>
+    </p>
+
+    <div class="inputs">
+        <div class="input-box">
+            <label for="input-starting-money">Starting money ($)</label>
+            <input type="text" id="input-starting-money" name="input-starting-money" value=10000>
+        </div>
+        <div class="input-box">
+            <label for="input-bet-amount">Bet Amount ($)</label>
+            <input type="text" id="input-bet-amount" name="input-bet-amount" value=1>
+        </div>
+        <div class="input-box">
+            <label for="input-payout-win">Payout on win (Heads) (1.00 = 100%)</label>
+            <input type="text" id="input-payout-win" name="input-payout-win" value=0.96>
+        </div>
+        <div class="input-box" disabled>
+            <label for="input-payout-loss">Payout on loss (Tails) (1.00 = 100%)</label>
+            1.00
+        </div>
+        <div class="input-box">
+            <label for="input-num-toss">Number of coin tosses</label>
+            <input type="text" id="input-num-toss" name="input-num-toss" value=100000>
+        </div>
+    </div>
+    <br><br>
+    <button type="simulate-btn" onclick="simulate()">Simulate</button>
+    <br><br>
+    <!-- init'd by script.js -->
+    
+    <div id="results-stats">
+        <span id="stats-results-num-toss"></span>
+        <span id="stats-results-heads"></span>
+        <span id="stats-results-tails"></span>
+        <span id="stats-wallet-end"></span>
+        <span id="stats-wallet-change-percent"></span>
+    </div>
+
+    <div id="tables">
+        <table id="result-table"></table>
+
+        <table id="history-table">
+            <tr>
+                <th colspan=4>History</th>
+            </tr>
+            <tr>
+                <th>Game #</th>
+                <th># Toss</th>
+                <th>Money Left</th>
+                <th>Change %</th>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

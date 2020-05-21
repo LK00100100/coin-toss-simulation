@@ -1,0 +1,43 @@
+.inputs {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.input-box {
+    margin: 10px;
+}
+
+div label {
+    min-width: 250px;
+    display: inline-block;
+}
+
+#results-stats {
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#results-stats span {
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+#tables table {
+    vertical-align: top;
+    display: inline-table;
+    margin-bottom: 10px;
+}
+
+.green-text {
+    color: green;
+}
+
+.red-text {
+    color: red;
+}
