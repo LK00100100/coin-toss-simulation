@@ -7,6 +7,7 @@
     <title>Coin Toss Gambling Simulation</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/slider.css'>
     <script src='js/simulate.js'></script>
 </head>
 
@@ -52,11 +53,12 @@
             <input type="text" id="input-num-toss" name="input-num-toss" value=100000>
         </div>
     </div>
+
     <br><br>
     <button type="simulate-btn" onclick="simulate()">Simulate</button>
     <br><br>
     <!-- init'd by script.js -->
-    
+
     <div id="results-stats">
         <span id="stats-results-num-toss"></span>
         <span id="stats-results-heads"></span>
@@ -64,6 +66,14 @@
         <span id="stats-wallet-end"></span>
         <span id="stats-wallet-change-percent"></span>
     </div>
+
+    <p>
+        Enable Results Table (Turn off for faster loading)
+        <label class="switch">
+            <input id="toggle-results-table" type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </p>
 
     <div id="tables">
         <table id="result-table"></table>

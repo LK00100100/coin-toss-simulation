@@ -83,6 +83,8 @@ function getRandomIntInclusive(min, max) {
  * @param {Array<{isHead:Boolean, wallet:Number}>} results an array of results.
  */
 function updateResultTableElement(results) {
+    let isTableEnabled = document.getElementById("toggle-results-table").checked;
+    
     let tableElement = document.getElementById("result-table");
     tableElement.textContent = "";
 
@@ -109,6 +111,9 @@ function updateResultTableElement(results) {
     tableRow.appendChild(headerIsHead);
     tableRow.appendChild(headerWallet);
     tableElement.appendChild(tableRow);
+
+    if(!isTableEnabled)
+        return;
 
     //create a data row for each point
     results.forEach((result, rowNum) => {
