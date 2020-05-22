@@ -84,7 +84,7 @@ function getRandomIntInclusive(min, max) {
  */
 function updateResultTableElement(results) {
     let isTableEnabled = document.getElementById("toggle-results-table").checked;
-    
+
     let tableElement = document.getElementById("result-table");
     tableElement.textContent = "";
 
@@ -112,7 +112,7 @@ function updateResultTableElement(results) {
     tableRow.appendChild(headerWallet);
     tableElement.appendChild(tableRow);
 
-    if(!isTableEnabled)
+    if (!isTableEnabled)
         return;
 
     //create a data row for each point
@@ -218,4 +218,16 @@ function appendHistory(totalToss, walletEnd, changePercentage) {
     tableRow.appendChild(tdWalletEnd);
     tableRow.appendChild(tdWalletChangePercent);
     table.appendChild(tableRow);
+}
+
+/**
+ * Clears the history table
+ */
+function clearHistory() {
+    let table = document.getElementById("history-table");
+
+    //dont delete the header
+    for (var i = table.rows.length - 1; i > 1; i--) {
+        table.deleteRow(i);
+    }
 }

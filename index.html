@@ -26,7 +26,13 @@
     <h2>Side notes</h2>
     If you don't have enough money to match the bet amount, you will bet everything.
     Payouts are rounded up to the nearest cent.
-    <br><br>
+    <br>
+    <ul>
+        <li>Try putting in a slightly positive win percentage</li>
+        <li>Try putting in a break-even win percentage</li>
+    </ul>
+    <a href="https://en.wikipedia.org/wiki/Matthew_effect">Wiki: Matthew Effect</a>
+    <br>
     <a href="https://en.wikipedia.org/wiki/Law_of_large_numbers">Wiki: Law of large Numbers</a>
     </p>
 
@@ -40,11 +46,11 @@
             <input type="text" id="input-bet-amount" name="input-bet-amount" value=1>
         </div>
         <div class="input-box">
-            <label for="input-payout-win">Payout on win (Heads) (1.00 = 100%)</label>
+            <label for="input-payout-win">Payout on win (Heads) (1.00 = 100% Gain)</label>
             <input type="text" id="input-payout-win" name="input-payout-win" value=0.96>
         </div>
         <div class="input-box" disabled>
-            <label for="input-payout-loss">Payout on loss (Tails) (1.00 = 100%)</label>
+            <label for="input-payout-loss">Payout on loss (Tails) (1.00 = 100% Loss)</label>
             1.00
         </div>
         <div class="input-box">
@@ -55,6 +61,7 @@
 
     <br><br>
     <button type="simulate-btn" onclick="simulate()">Simulate</button>
+    <button type="clear-history-btn" onclick="clearHistory()">Clear History</button>
     <br><br>
     <!-- init'd by script.js -->
 
